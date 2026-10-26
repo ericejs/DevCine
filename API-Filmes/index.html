@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubra filmes populares, lançamentos e os mais bem avaliados."
+    />
+    <title>DEVcine | Filmes para assistir</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="#" aria-label="DEVcine, início">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>DEV<span class="brand-accent">cine</span></span>
+        </a>
+
+        <div class="nav-links">
+          <button class="nav-link is-active" type="button" data-category="popular">
+            Populares
+          </button>
+          <button class="nav-link" type="button" data-category="now_playing">
+            Em cartaz
+          </button>
+          <button class="nav-link" type="button" data-category="top_rated">
+            Mais bem avaliados
+          </button>
+        </div>
+
+        <div class="nav-actions">
+          <form class="search-form" role="search">
+            <label class="visually-hidden" for="search-input">Buscar filmes</label>
+            <input
+              id="search-input"
+              name="query"
+              type="search"
+              placeholder="Buscar filmes..."
+              autocomplete="off"
+            />
+            <button class="search-button" type="submit" aria-label="Buscar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                <path d="m16 16 5 5"></path>
+              </svg>
+            </button>
+          </form>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Ativar tema escuro"
+            title="Alternar tema"
+          >
+            <svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"></path>
+            </svg>
+            <svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Seu próximo filme favorito está aqui</p>
+          <h1 id="hero-title">Uma história para <span>cada momento.</span></h1>
+          <p class="hero-description">
+            Explore grandes sucessos, descubra novidades e escolha o que assistir hoje.
+          </p>
+          <a class="hero-button" href="#filmes">Explorar filmes</a>
+        </div>
+        <div class="hero-decoration" aria-hidden="true">
+          <span class="decoration-circle"></span>
+          <span class="decoration-star">✦</span>
+          <span class="decoration-dot"></span>
+        </div>
+      </section>
+
+      <section class="movies-section" id="filmes" aria-labelledby="movies-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">Seleção CineMundo</p>
+            <h2 id="movies-title">Filmes populares</h2>
+          </div>
+          <p class="section-note">Histórias que estão conquistando todo mundo</p>
+        </div>
+
+        <p class="status-message" id="status-message" role="status" aria-live="polite">
+          Carregando filmes...
+        </p>
+        <div class="movie-grid" id="movie-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>DEV<span class="brand-accent">cine</span></span>
+      </a>
+      <p>Dados de filmes fornecidos por TMDB.</p>
+    </footer>
+  </body>
+</html>
